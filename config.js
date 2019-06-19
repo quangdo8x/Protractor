@@ -4,11 +4,11 @@ var dateFormat = require('dateformat');
 exports.config = {
     framework: 'jasmine',
     // The address of a running selenium server.
-    seleniumAddress: 'http://localhost:4444/wd/hub',
+    seleniumAddress: 'http://192.168.213.21:4444/wd/hub',
     // specs: ['Testcases/Login.ts'],
     specs: ['Bank.ts'],
     //run directly with browser driver without using webdriver manager
-    directConnect: true,
+    directConnect: false,
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
         browserName: 'chrome',
