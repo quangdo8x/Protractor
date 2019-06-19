@@ -37,7 +37,7 @@ exports.config = {
         var HtmlReporter = require('protractor-beautiful-reporter');
         // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
         jasmine.getEnv().addReporter(new HtmlReporter({
-            baseDirectory: __dirname + '\\outputs\\reports\\' + dateFormat(new Date(), "yyyy_mm_dd_hh_MM_ss")
+            baseDirectory: __dirname + '\\outputs\\reports\\' + dateFormat(new Date(), "yyyy_mm_dd_HH_mm_ss")
         }).getJasmine2Reporter());
         
     },
@@ -49,7 +49,7 @@ exports.config = {
         var path = require('path');
         var reporter = new HtmlReporter({
             //baseDirectory: '/tmp/screenshots'
-            baseDirectory: __dirname + '\\outputs\\reports\\' + dateFormat(new Date(), "yyyy_mm_dd_hh_MM_ss")
+            baseDirectory: __dirname + '\\outputs\\reports\\' + dateFormat(new Date(), "yyyy_mm_dd_HH_mm_ss")
             , pathBuilder: function pathBuilder(spec, descriptions, results, capabilities) {
                 // Return '<browser>/<specname>' as path for screenshots:
                 // Example: 'firefox/list-should work'.

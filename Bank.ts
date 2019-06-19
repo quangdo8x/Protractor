@@ -37,23 +37,22 @@ describe('Bank', function(){
     await browser.sleep(7000)
   });
 
-  it('should open account successfully', async function() {
+  // it('should open account successfully', async function() {
 
-    await browser.element(by.xpath('//button[starts-with(text(),"Open Account")]')).click();
+  //   await browser.element(by.xpath('//button[starts-with(text(),"Open Account")]')).click();
 
-    let customerSelection = element(by.model('custId'))
-    await customerSelection.$('[value="John Kenedy"]').click()
+  //   let customerSelection = element(by.model('custId'))
+  //   await customerSelection.$('[value="John Kenedy"]').click()
 
-    let currencySelection = element(by.model('currency'))
-    await currencySelection.$('[value="Dollar"]').click()
+  //   let currencySelection = element(by.model('currency'))
+  //   await currencySelection.$('[value="Dollar"]').click()
 
-    await browser.element(by.xpath('//button[text()="Process"]')).click()
-    await expect(browser.switchTo().alert().getText()).toContain('successfully')
-    await browser.sleep(3000)
-    await browser.switchTo().alert().accept()
-    await browser.sleep(7000)
-  });
-
+  //   await browser.element(by.xpath('//button[text()="Process"]')).click()
+  //   await expect(browser.switchTo().alert().getText()).toContain('successfully')
+  //   await browser.sleep(3000)
+  //   await browser.switchTo().alert().accept()
+  //   await browser.sleep(7000)
+  // });
   // it('should delete customer successfully', async function(){
     
   //   await browser.element(by.xpath('//button[starts-with(text(),"Customer")]')).click()
