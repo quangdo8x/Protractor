@@ -7,12 +7,21 @@ exports.config = {
     seleniumAddress: 'http://192.168.213.21:4444/wd/hub',
     // specs: ['Testcases/Login.ts'],
     specs: ['Bank.ts'],
+    
+    //This is used to run multiple specs
+    //specs: [
+        //'Testcases/Deposit.ts',
+      //  'Testcases/Withdraw.ts'
+    //],
+    
     //run directly with browser driver without using webdriver manager
     directConnect: false,
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
         browserName: 'chrome',
         shardTestFiles: true,
+        
+        //Run on 2 browsers at the same time
         maxInstances: 2
     },
     // multiCapabilities: [
