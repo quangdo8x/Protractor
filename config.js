@@ -5,14 +5,13 @@ exports.config = {
     framework: 'jasmine',
     // The address of a running selenium server.
     seleniumAddress: 'http://192.168.213.21:4444/wd/hub',
-    // specs: ['Testcases/Login.ts'],
-    specs: ['Bank.ts'],
     
     //This is used to run multiple specs
-    //specs: [
-        //'Testcases/Deposit.ts',
-      //  'Testcases/Withdraw.ts'
-    //],
+    specs: [
+        'src/tests/Bank.ts',
+        'src/tests/Deposit.ts',
+        'src/tests/Withdraw.ts'
+    ],
     
     //run directly with browser driver without using webdriver manager
     directConnect: false,
@@ -21,8 +20,8 @@ exports.config = {
         browserName: 'chrome',
         shardTestFiles: true,
         
-        //Run on 2 browsers at the same time
-        maxInstances: 2
+        //Number of browsers at the same execution time
+        maxInstances: 1
     },
     // multiCapabilities: [
     //     {
